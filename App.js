@@ -1,21 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { ImageBackground } from 'react-native'
+import HomeScreen from './screens/Home'
 
 export default function App() {
+  // console.log('this is the platform', Platform.OS == 'ios' ? true : false)
+  
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <ImageBackground source={require('./assets/bk.jpeg')} style={{ display: 'flex', height: '100%' }}>
+    <HomeScreen />
+    </ImageBackground>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
